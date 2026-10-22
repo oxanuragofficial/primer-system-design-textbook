@@ -1,57 +1,86 @@
- <div align="center">
+<div align="center">
 
-# 📘 System Design: From First Principles to Production
+# 📘 System Design
+## From First Principles to Production
 
-**A free, 305-page system design textbook for students and software engineers.**
+### A Complete System Design Textbook
 
-Learn system design from the fundamentals to real-world architectures, with diagrams, worked examples, interview questions, and exercises with answers.
+**305 Pages · Free · Practical · Interview-Focused**
 
-[![Download Textbook PDF](https://img.shields.io/badge/⬇_Download_Complete_Textbook-PDF-2563EB?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://github.com/user-attachments/files/33804599/System_Design_Complete_Textbook.pdf)
+Learn how real-world systems work — from networking and databases to scalable architecture, reliability, and production design.
 
-[![Free](https://img.shields.io/badge/Price-Free-16A34A?style=flat-square)](https://github.com/oxanuragofficial/primer-system-design-textbook)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-F59E0B?style=flat-square)](LICENSE)
+<br/>
+
+<a href="https://github.com/user-attachments/files/33804599/System_Design_Complete_Textbook.pdf">
+  <img src="https://img.shields.io/badge/⬇%20DOWNLOAD%20THE%20COMPLETE%20TEXTBOOK-2563EB?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download Complete System Design Textbook PDF" />
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/PAGES-305-7C3AED?style=for-the-badge" alt="305 pages" />
+<img src="https://img.shields.io/badge/PRICE-FREE-16A34A?style=for-the-badge" alt="Free textbook" />
+<img src="https://img.shields.io/badge/LICENSE-CC%20BY%204.0-F59E0B?style=for-the-badge" alt="CC BY 4.0 license" />
 
 </div>
 
 ---
 
-## 📚 What's Inside?
+## ✨ What You'll Learn
 
-- **Foundations:** Core concepts, concurrency, and capacity estimation.
-- **Networking:** HTTP, APIs, CDNs, load balancers, and proxies.
-- **Databases:** SQL, NoSQL, scaling, and consistency.
-- **Performance & Reliability:** Caching, queues, microservices, and resilience.
-- **Security & Operations:** Observability, deployment, and disaster recovery.
-- **Real-World Systems:** Social networks, web crawlers, payments, and notifications.
-- **Object-Oriented Design:** Practical design problems with code examples.
-- **Interview Practice:** Design questions, exercises, and revision sheets.
+| 📚 Topic | 🔍 Coverage |
+|---|---|
+| 🔵 Foundations | Core concepts, concurrency, capacity estimation |
+| 🌐 Networking | HTTP, APIs, CDNs, load balancers |
+| 🗄️ Databases | SQL, NoSQL, scaling, consistency |
+| ⚡ Performance | Caching, queues, asynchronous systems |
+| 🛡️ Reliability | Microservices, resilience, disaster recovery |
+| 🏗️ Real-World Design | Social networks, payments, notifications |
+| 💻 Object-Oriented Design | Practical problems with code examples |
+| 🎯 Interview Preparation | Design questions, exercises, revision sheets |
 
-## 🎯 Who Is It For?
+**Includes:** Architecture diagrams, worked examples, interview Q&A, and exercises with answers.
 
-Students, beginners, developers, and engineers preparing for system design interviews or learning how scalable software systems work.
+## 🎯 Who Is This For?
 
-## 🗂️ Repository
+- 🎓 Students and beginners learning system design
+- 💻 Developers building scalable applications
+- 🚀 Engineers preparing for system design interviews
 
-- [`code/`](code/) — Code examples and tests
-- [`source/`](source/) — Markdown chapters and PDF build scripts
-- [`docs/QA_REPORT.md`](docs/QA_REPORT.md) — Quality checks and review notes
-
-## 🌐 Acknowledgment
-
-The syllabus follows the [System Design Primer](https://github.com/donnemartin/system-design-primer) by Donne Martin.
-
-## 📄 License
-
-Licensed under [CC BY 4.0](LICENSE). Share and adapt with appropriate credit.
-
-## ⭐ Support the Project
-
-If this textbook helps you, consider starring the repository and sharing it with other learners.
+## 🗂️ Explore the Repository
 
 <div align="center">
 
-[![Star on GitHub](https://img.shields.io/badge/⭐_Star_Repository-181717?style=for-the-badge&logo=github)](https://github.com/oxanuragofficial/primer-system-design-textbook)
+<a href="source/"><img src="https://img.shields.io/badge/📖%20SOURCE%20CHAPTERS-7C3AED?style=for-the-badge" alt="Source Chapters" /></a>
+<a href="code/"><img src="https://img.shields.io/badge/💻%20CODE%20EXAMPLES-0891B2?style=for-the-badge" alt="Code Examples" /></a>
+<a href="docs/QA_REPORT.md"><img src="https://img.shields.io/badge/✅%20QUALITY%20REPORT-16A34A?style=for-the-badge" alt="Quality Report" /></a>
 
-**Learn the fundamentals. Design better systems.**
+<br/><br/>
+
+<a href="https://github.com/oxanuragofficial/primer-system-design-textbook/issues"><img src="https://img.shields.io/badge/🐛%20REPORT%20AN%20ISSUE-DC2626?style=for-the-badge&logo=github&logoColor=white" alt="Report an Issue" /></a>
+<a href="https://github.com/oxanuragofficial/primer-system-design-textbook/pulls"><img src="https://img.shields.io/badge/🤝%20CONTRIBUTE-DB2777?style=for-the-badge&logo=github&logoColor=white" alt="Contribute" /></a>
+
+</div>
+
+## 🌐 Acknowledgment
+
+The syllabus follows the open-source [System Design Primer](https://github.com/donnemartin/system-design-primer) by Donne Martin.
+
+## 📄 License
+
+Licensed under [Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE).
+
+---
+
+<div align="center">
+
+### ⭐ Found This Useful?
+
+<a href="https://github.com/oxanuragofficial/primer-system-design-textbook">
+  <img src="https://img.shields.io/badge/⭐%20STAR%20THIS%20REPOSITORY-111827?style=for-the-badge&logo=github&logoColor=white" alt="Star this repository on GitHub" />
+</a>
+
+<br/><br/>
+
+**Understand the fundamentals. Master the trade-offs. Design better systems.**
 
 </div>
