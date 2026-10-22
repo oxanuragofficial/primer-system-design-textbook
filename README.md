@@ -21,7 +21,6 @@ Learn how real-world systems work — from networking and databases to scalable 
 <img src="https://img.shields.io/badge/PRICE-FREE-16A34A?style=for-the-badge" alt="Free textbook" />
 <img src="https://img.shields.io/badge/LICENSE-CC%20BY%204.0-F59E0B?style=for-the-badge" alt="CC BY 4.0 license" />
 
-</div>
 
 ---
 
