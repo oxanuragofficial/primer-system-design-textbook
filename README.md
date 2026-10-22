@@ -15,13 +15,13 @@ Learn how real-world systems work — from networking and databases to scalable 
   <img src="https://img.shields.io/badge/⬇%20DOWNLOAD%20THE%20COMPLETE%20TEXTBOOK-2563EB?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download Complete System Design Textbook PDF" />
 </a>
 
-<br/><br/>
+<br/>
 
 <img src="https://img.shields.io/badge/PAGES-305-7C3AED?style=for-the-badge" alt="305 pages" />
 <img src="https://img.shields.io/badge/PRICE-FREE-16A34A?style=for-the-badge" alt="Free textbook" />
 <img src="https://img.shields.io/badge/LICENSE-CC%20BY%204.0-F59E0B?style=for-the-badge" alt="CC BY 4.0 license" />
 
-
+</div>
 ---
 
 ## ✨ What You'll Learn
@@ -53,7 +53,7 @@ Learn how real-world systems work — from networking and databases to scalable 
 <a href="code/"><img src="https://img.shields.io/badge/💻%20CODE%20EXAMPLES-0891B2?style=for-the-badge" alt="Code Examples" /></a>
 <a href="docs/QA_REPORT.md"><img src="https://img.shields.io/badge/✅%20QUALITY%20REPORT-16A34A?style=for-the-badge" alt="Quality Report" /></a>
 
-<br/><br/>
+<br/>
 
 <a href="https://github.com/oxanuragofficial/primer-system-design-textbook/issues"><img src="https://img.shields.io/badge/🐛%20REPORT%20AN%20ISSUE-DC2626?style=for-the-badge&logo=github&logoColor=white" alt="Report an Issue" /></a>
 <a href="https://github.com/oxanuragofficial/primer-system-design-textbook/pulls"><img src="https://img.shields.io/badge/🤝%20CONTRIBUTE-DB2777?style=for-the-badge&logo=github&logoColor=white" alt="Contribute" /></a>
