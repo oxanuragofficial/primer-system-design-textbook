@@ -1,0 +1,6 @@
+digraph G { rankdir=LR; nodesep=0.7; ranksep=1.2;
+t1 [label="Thread 1" shape=ellipse fillcolor="#ffffff"]; t2 [label="Thread 2" shape=ellipse fillcolor="#ffffff"];
+a [label="Lock A" fillcolor="#d5e7ef"]; b [label="Lock B" fillcolor="#d5e7ef"];
+a->t1 [label="held by" color="#17324D"]; b->t2 [label="held by" color="#17324D"];
+t1->b [label="waits for" color="#b4492f" fontcolor="#b4492f" style=dashed]; t2->a [label="waits for" color="#b4492f" fontcolor="#b4492f" style=dashed];
+{rank=same; a; b} }

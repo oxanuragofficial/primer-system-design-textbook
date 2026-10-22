@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.2; ranksep=0.28; node [fontsize=9.5 margin="0.09,0.06"];
+u [label="User" shape=ellipse fillcolor="#ffffff"]; b [label="Browser\ncache"]; c [label="CDN"]; p [label="Reverse\nproxy"]; a [label="App\nmemory"]; d [label="Distributed\ncache" fillcolor="#d5e7ef"]; db [label="Database\n(+ buffers)" shape=cylinder fillcolor="#bcd9e5"];
+u->b->c->p->a->d->db; }

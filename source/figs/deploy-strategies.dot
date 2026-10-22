@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.15; ranksep=0.3; node [fontsize=9 margin="0.08,0.05"];
+subgraph cluster_r { label="Rolling"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; r1 [label="v1  v1  v1  v1"]; r2 [label="v2  v1  v1  v1"]; r3 [label="v2  v2  v2  v2" fillcolor="#e3f1ea"]; r1->r2->r3; }
+subgraph cluster_b { label="Blue-green"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; b1 [label="Router -> blue (v1)\ngreen (v2) idle, tested"]; b2 [label="Router -> green (v2)\nblue kept for rollback" fillcolor="#e3f1ea"]; b1->b2 [label="flip"]; }
+subgraph cluster_c { label="Canary"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; c1 [label="1% -> v2"]; c2 [label="10% -> v2"]; c3 [label="50% -> v2"]; c4 [label="100% -> v2" fillcolor="#e3f1ea"]; c1->c2->c3->c4; }
+}

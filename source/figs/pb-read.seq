@@ -1,0 +1,9 @@
+participants: Client, App server, Cache, SQL database, Object store
+Client -> App server: GET /7Hq2Zx
+App server -> Cache: get paste:7Hq2Zx
+Cache --> App server: miss
+App server -> SQL database: SELECT metadata
+SQL database --> App server: row (expires_at)
+App server -> Object store: get content
+App server -> Cache: set (TTL = min(1 h, time to expiry))
+App server --> Client: 200 text/plain (or 410 if expired)

@@ -1,0 +1,3 @@
+digraph G { rankdir=TB; nodesep=0.2; ranksep=0.4; node [fontsize=9.3 margin="0.08,0.06"];
+u [label="Customer\n(browser, app)" shape=ellipse fillcolor="#ffffff"]; w [label="Web app\n(React)"]; g [label="API gateway"]; o [label="Order service"]; p [label="Payment service"]; i [label="Inventory service"]; q [label="Event broker" fillcolor="#d5e7ef"]; e [label="Email service"]; od [label="Orders DB" shape=cylinder]; ext [label="Card provider\n(external)" fillcolor="#FFF8E6"];
+u->w [label="HTTPS"]; w->g [label="REST/JSON"]; g->o; o->od [label="SQL"]; o->p [label="gRPC"]; o->i [label="gRPC"]; o->q [label="publishes OrderPlaced" style=dashed]; q->e [style=dashed]; p->ext [label="HTTPS"]; }

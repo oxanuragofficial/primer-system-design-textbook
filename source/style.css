@@ -1,0 +1,99 @@
+@page { size: A4; margin: 24mm 20mm 24mm 22mm;
+  @top-left { width: 45%; content: string(chap); font: 8pt Inter, sans-serif; color: #176B87; letter-spacing: .04em; text-transform: uppercase; border-bottom: .4pt solid #c9d3dd; padding-bottom: 2mm; width: 100%; vertical-align: bottom }
+  @top-right { width: 55%; text-align: right; white-space: nowrap; overflow: hidden; content: string(sect); font: 8pt Inter, sans-serif; color: #6b7a86; border-bottom: .4pt solid #c9d3dd; padding-bottom: 2mm; vertical-align: bottom }
+  @bottom-center { content: counter(page); font: 8.5pt Inter, sans-serif; color: #17324D } }
+@page cover { margin: 0; @top-left{content:none;border:none} @top-right{content:none;border:none} @bottom-center{content:none} }
+@page frontm { @bottom-center { content: counter(page, lower-roman) } @top-left{content:"Contents"} @top-right{content:none} }
+@page partpage { @top-left{content:none;border:none} @top-right{content:none;border:none} @bottom-center{content:none} }
+@page chapfirst { @top-left{content:none;border:none} @top-right{content:none;border:none} }
+html { font: 10.3pt/1.5 "Bitstream Charter", Charter, serif; color: #263238; hyphens: auto; }
+body { margin: 0 }
+p { margin: 0 0 2.35mm; text-align: justify; orphans: 3; widows: 3 }
+a { color: inherit; text-decoration: none }
+h1,h2,h3,h4 { font-family: Inter, sans-serif; color: #17324D; hyphens: manual; text-align: left }
+h1 { font-size: 24pt; line-height: 1.15; margin: 0 0 6mm; page-break-after: avoid; string-set: chap content(); bookmark-level: 2; bookmark-label: content(); }
+.chapter-open { page: chapfirst; break-before: page; }
+.chapter-open .kicker { font: 600 9.5pt Inter; letter-spacing: .14em; text-transform: uppercase; color: #176B87; margin: 18mm 0 3mm }
+.chapter-open h1 { font-size: 27pt; border-bottom: 2pt solid #176B87; padding-bottom: 4mm; margin-bottom: 5mm }
+.chapter-open .srcline { font: 8.3pt/1.4 Inter; color: #5b6b78; margin: 0 0 6mm }
+.chapter-open .srcline b { color: #17324D }
+h2 { font-size: 14.5pt; margin: 8mm 0 3mm; page-break-after: avoid; string-set: sect content(); bookmark-level: 3; bookmark-label: content(); border-bottom: .5pt solid #c9d3dd; padding-bottom: 1.2mm }
+h3 { font-size: 11.2pt; margin: 5.5mm 0 2mm; color: #176B87; page-break-after: avoid }
+h4 { font-size: 10pt; margin: 4mm 0 1.5mm; page-break-after: avoid }
+.secnum { color: #176B87 }
+ul,ol { margin: 0 0 3mm; padding-left: 6mm } li { margin-bottom: 1mm; text-align: left }
+li > p { margin-bottom: 1mm }
+strong { color: #17324D }
+code { font: 8.6pt "DejaVu Sans Mono", monospace; background: #EEF2F6; padding: .1mm .9mm; border-radius: 1mm; color: #17324D }
+pre { margin: 0 0 4mm; padding: 2.6mm 3.2mm; background: #F4F7FA; border-left: 1.4mm solid #176B87; font: 8.1pt/1.38 "DejaVu Sans Mono", monospace; white-space: pre-wrap; word-break: break-all; page-break-inside: avoid; color: #1e2c36 }
+pre code { background: none; padding: 0; font: inherit; color: inherit }
+.codehilite { margin: 0 }
+.codehilite .k,.codehilite .kn,.codehilite .kd,.codehilite .kt { color: #176B87; font-weight: bold }
+.codehilite .c1,.codehilite .c,.codehilite .cm { color: #6b7a86; font-style: italic }
+.codehilite .s,.codehilite .s1,.codehilite .s2 { color: #9a3f2b }
+.codehilite .mi,.codehilite .mf { color: #7b4ba3 }
+table { border-collapse: collapse; width: 100%; margin: 0 0 4mm; font: 8.7pt/1.35 Inter, sans-serif; page-break-inside: auto }
+thead { display: table-header-group }
+tr { page-break-inside: avoid }
+th { background: #17324D; color: #fff; text-align: left; padding: 1.6mm 2.2mm; font-weight: 600 }
+td { padding: 1.5mm 2.2mm; border-bottom: .4pt solid #c9d3dd; vertical-align: top }
+tbody tr:nth-child(even) td { background: #F3F6F9 }
+.tcap, .fcap { font: 8.6pt/1.35 Inter, sans-serif; color: #17324D; margin: 0 0 1.8mm; text-align: left }
+.tcap { page-break-after: avoid } .tcap b,.fcap b { color: #176B87 }
+figure { margin: 3mm 0 4.5mm; text-align: center; page-break-inside: avoid }
+figure img { max-width: 100%; max-height: 195mm }
+.fcap { margin: 1.5mm 0 0; text-align: left; padding-left: 2mm; border-left: 1.2mm solid #176B87 }
+.box { margin: 3mm 0 4.2mm; padding: 2.6mm 3.6mm 1.2mm; border-radius: 1.2mm; background: #E8EEF4; border-left: 1.6mm solid #176B87; page-break-inside: avoid; font-size: 9.6pt; line-height: 1.45 }
+.box .bt { font: 700 8pt Inter; letter-spacing: .09em; text-transform: uppercase; color: #176B87; margin: 0 0 1.4mm }
+.box p { margin-bottom: 1.8mm } .box ul,.box ol { margin-bottom: 1.8mm }
+.box.objectives { background: #17324D; color: #fff; border-left-color: #176B87 } .box.objectives .bt { color: #9fd3e3 } .box.objectives strong, .box.objectives code { color: #fff; background: transparent }
+.box.prereq { background: #fff; border: .6pt solid #c9d3dd; border-left: 1.6mm solid #17324D }
+.box.warning { background: #FBF0EC; border-left-color: #b4492f } .box.warning .bt { color: #b4492f }
+.box.interview { background: #fff; border: .6pt solid #176B87; border-left: 1.6mm solid #176B87 }
+.box.analogy { background: #F1F7F4; border-left-color: #3b8a6a } .box.analogy .bt { color: #2d6e53 }
+.box.supplement { background: #fff; border: .6pt dashed #176B87; border-left: 1.6mm solid #17324D }
+.box.supplement .bt { color: #17324D }
+.box.summary { background: #E8EEF4; border-left-color: #17324D }
+.box.worked { background: #fff; border: .6pt solid #c9d3dd; border-left: 1.6mm solid #176B87 }
+.box.note { background: #FFF8E6; border-left-color: #c58f12 } .box.note .bt { color: #8a6208 }
+.box.exercise { background: #fff; border: .6pt solid #c9d3dd; border-left: 1.6mm solid #c58f12 } .box.exercise .bt { color: #8a6208 }
+.box.long { page-break-inside: auto }
+dl { margin: 0 0 3mm } dt { font: 600 9.2pt Inter; color: #17324D; margin-top: 1.6mm; page-break-after: avoid } dd { margin: 0 0 .8mm 5mm; text-align: left }
+.box dl { margin-bottom: 1.4mm }
+.terms dl { display: block }
+.part { page: partpage; break-before: page; break-after: page; height: 235mm; background: #17324D; color: #fff; margin: -24mm -20mm -24mm -22mm; padding: 90mm 28mm 0 30mm; }
+.part .pn { font: 600 11pt Inter; letter-spacing: .2em; text-transform: uppercase; color: #9fd3e3 }
+.part h1 { color: #fff; font-size: 34pt; margin-top: 6mm; bookmark-level: 1; string-set: none; border: none }
+.part p { color: #cfe0ea; font: 11pt/1.5 Inter; text-align: left; max-width: 120mm }
+.toc { page: frontm; break-before: page }
+.toc h1 { string-set: none; bookmark-level: none }
+.toc .tp { font: 700 10pt Inter; color: #fff; background: #17324D; padding: 1.4mm 3mm; margin: 4mm 0 1mm; page-break-after: avoid }
+.toc .tc { font: 600 9pt Inter; margin: 1.6mm 0 0; color: #17324D; page-break-after: avoid }
+.toc .ts { font: 8pt Inter; color: #455560; margin: 0 0 0 7mm }
+.toc a::after { content: leader('.') target-counter(attr(href), page); color: #6b7a86 }
+.toc .tc a::after { color: #17324D }
+.toc div { text-align: left }
+.index { column-count: 2; column-gap: 8mm; font: 8.6pt/1.4 Inter }
+.index div { break-inside: avoid; margin: 0 } .index .il { font: 700 10pt Inter; color: #176B87; margin: 3mm 0 1mm; break-after: avoid }
+.index .ie a { color: #17324D } .index .ie a::after { content: target-counter(attr(href), page) } .index .ie a + a::before { content: ", " }
+.index .ie a::after { content: target-counter(attr(href), page) }
+.glossary dt { margin-top: 2mm } 
+.ix { }
+.cover { page: cover; break-after: page; height: 297mm; background: #17324D; color: #fff; position: relative; overflow: hidden }
+.cover .band { position: absolute; left: 0; right: 0; top: 156mm; height: 2.2mm; background: #176B87 }
+.cover .ct { position: absolute; left: 24mm; top: 52mm; right: 24mm }
+.cover .ct .eyebrow { font: 600 10pt Inter; letter-spacing: .24em; text-transform: uppercase; color: #9fd3e3; margin-bottom: 8mm }
+.cover .ct h1 { font-size: 44pt; line-height: 1.08; color: #fff; margin: 0 0 8mm; bookmark-level: none; string-set: none }
+.cover .ct p { font: 13pt/1.5 Inter; color: #cfe0ea; max-width: 140mm; text-align: left }
+.cover .cf { position: absolute; left: 24mm; right: 24mm; bottom: 20mm; font: 8.6pt/1.5 Inter; color: #9fb3c2 }
+.cover svg, .cover img { position: absolute; right: 18mm; top: 165mm; width: 170mm }
+.meta { page: frontm; break-before: page; font: 9pt/1.5 Inter; }
+.meta h2 { string-set: none }
+
+.box.terms, .box.objectives, .box.exercise, .box.interview { page-break-inside: auto }
+
+th, td { hyphens: manual }
+th:first-child, td:first-child { min-width: 15mm }
+.ixa{display:inline}
+.box .bt { break-after: avoid; page-break-after: avoid }
+#idx h1 { string-set: chap content(), sect "Index" }

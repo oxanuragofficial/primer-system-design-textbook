@@ -1,0 +1,7 @@
+digraph G { rankdir=TB; nodesep=0.12; ranksep=0.22; node [fontsize=9 margin="0.07,0.05"];
+u [label="Discovered\nURLs" shape=ellipse fillcolor="#ffffff"]; pr [label="Prioritiser\n(score)"]; 
+subgraph cluster_f { label="Front queues (priority)"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; f1 [label="High"]; f2 [label="Medium"]; f3 [label="Low"]; }
+rt [label="Router\n(host hash)"];
+subgraph cluster_b { label="Back queues (one host each)"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; b1 [label="a.com"]; b2 [label="b.org"]; b3 [label="c.net"]; }
+sc [label="Scheduler\nheap of\n(next time, host)" fillcolor="#d5e7ef"]; w [label="Workers"];
+u->pr; pr->f1; pr->f2; pr->f3; f1->rt; f2->rt; f3->rt; rt->b1; rt->b2; rt->b3; b1->sc; b2->sc; b3->sc; sc->w; }

@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.2; ranksep=0.4;
+i [label="Internet" shape=ellipse fillcolor="#ffffff"]; p [label="Reverse proxy\nTLS, compression,\ncache, routing" fillcolor="#d5e7ef"];
+w [label="Web app\n/ (pages)"]; a [label="API service\n/api"]; s [label="Static files\n/static"];
+i->p; p->w; p->a; p->s; }

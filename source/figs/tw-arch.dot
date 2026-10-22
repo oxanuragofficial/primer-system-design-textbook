@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.16; ranksep=0.3; node [fontsize=9 margin="0.07,0.05"];
+c [label="Clients" shape=ellipse fillcolor="#ffffff"]; api [label="API tier" fillcolor="#d5e7ef"]; ts [label="Tweet\nstore" shape=cylinder]; q [label="Event\nqueue" fillcolor="#d5e7ef"]; fo [label="Fan-out\nservice"]; ug [label="User graph\nservice"]; tc [label="Timeline\ncache" shape=cylinder fillcolor="#d5e7ef"]; si [label="Search\nindexer"]; sx [label="Search\ncluster" shape=cylinder]; ns [label="Notification\nservice"]; mo [label="Object store\n+ CDN" shape=cylinder];
+c->api; api->ts [label="write"]; api->q [label="publish"]; q->fo; fo->ug [label="followers?"]; fo->tc [label="insert id"]; q->si->sx; q->ns; api->tc [label="read" style=dashed]; api->mo [style=dashed]; }

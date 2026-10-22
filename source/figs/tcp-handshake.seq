@@ -1,0 +1,9 @@
+participants: Client, Server
+== connection setup (1 round trip) ==
+Client -> Server: SYN (seq = x)
+Server --> Client: SYN-ACK (seq = y, ack = x+1)
+Client -> Server: ACK (ack = y+1)
+== data ==
+Client -> Server: HTTP request
+Server --> Client: ACK + response data
+note over Client, Server: lost segment? the sender retransmits when no ACK arrives

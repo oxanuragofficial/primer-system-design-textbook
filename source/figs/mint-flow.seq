@@ -1,0 +1,10 @@
+participants: Scheduler, Worker, Aggregator, Stream, Pipeline, Store
+Scheduler -> Worker: refresh(account)
+Worker -> Aggregator: fetch after cursor
+Aggregator --> Worker: new transactions
+Worker -> Stream: publish
+self Worker: advance cursor
+Stream -> Pipeline: event
+Pipeline -> Store: upsert + summary delta
+note over Pipeline, Store: unique key makes redelivery safe
+Pipeline --> Stream: transaction.created

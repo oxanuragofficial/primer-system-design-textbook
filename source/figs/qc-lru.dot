@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.1; ranksep=0.3; node [fontsize=9 margin="0.07,0.05"];
+subgraph cluster_m { label="Hash map"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; node [shape=box]; ka [label="key A" fillcolor="#ffffff"]; kb [label="key B" fillcolor="#ffffff"]; kc [label="key C" fillcolor="#ffffff"]; }
+h [label="head\n(MRU side)" shape=plaintext fillcolor="#ffffff"]; a [label="A" fillcolor="#d5e7ef"]; b [label="B"]; c [label="C" fillcolor="#f1dede"]; t [label="tail\n(evict here)" shape=plaintext fillcolor="#ffffff"];
+h->a; a->b [dir=both]; b->c [dir=both]; c->t; ka->a [style=dashed]; kb->b [style=dashed]; kc->c [style=dashed]; }

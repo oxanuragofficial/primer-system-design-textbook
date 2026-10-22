@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.22; ranksep=0.45;
+c [label="Clients" shape=ellipse fillcolor="#ffffff"]; 
+subgraph cluster_l { label="Balancers (redundant)"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; lb1 [label="LB 1\n(active)" fillcolor="#d5e7ef"]; lb2 [label="LB 2\n(active or standby)" fillcolor="#d5e7ef"]; }
+s1 [label="Server 1"]; s2 [label="Server 2"]; s3 [label="Server 3\n(failed)" fillcolor="#FBF0EC" color="#b4492f"];
+c->lb1; c->lb2 [style=dashed]; lb1->s1; lb1->s2; lb1->s3 [style=dotted color="#b4492f" label="health check\nfails: no traffic" fontcolor="#b4492f"]; }

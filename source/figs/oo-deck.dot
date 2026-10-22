@@ -1,0 +1,3 @@
+digraph G { rankdir=BT; nodesep=0.15; ranksep=0.3; node [shape=record fontsize=9];
+card [label="{Card|value, suit\l}" fillcolor="#ffffff"]; bc [label="{BlackJackCard|is_ace()\lis_face()\lpoints()\l}" fillcolor="#d5e7ef"]; hand [label="{Hand|cards\l|add(card)\l}" fillcolor="#ffffff"]; bh [label="{BlackJackHand|possible_scores()\lscore()\lis_bust()\l}" fillcolor="#d5e7ef"]; deck [label="{Deck|cards, deal_index\l|shuffle()\ldeal()\lremaining()\l}" fillcolor="#ffffff"];
+bc->card [arrowhead=empty]; bh->hand [arrowhead=empty]; deck->card [label="52" arrowhead=odiamond]; hand->card [label="0..*" arrowhead=odiamond]; }

@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.14; ranksep=0.3; node [fontsize=9 margin="0.07,0.05"];
+c [label="Client" shape=ellipse fillcolor="#ffffff"]; api [label="API\n(auth, privacy)"]; gs [label="Graph Service\n(bidirectional BFS)" fillcolor="#d5e7ef"]; ls [label="Lookup Service\nperson to shard"]; ca [label="Adjacency\ncache" shape=cylinder];
+p1 [label="Person Server 1" shape=cylinder]; p2 [label="Person Server 2" shape=cylinder]; p3 [label="Person Server N" shape=cylinder];
+c->api->gs; gs->ls; gs->ca; gs->p1; gs->p2; gs->p3; }

@@ -1,0 +1,10 @@
+participants: Client 1, Lock service, Client 2, Storage
+Client 1 -> Lock service: acquire lock
+Lock service --> Client 1: granted, token 33
+note over Client 1: long pause (GC); lease expires
+Client 2 -> Lock service: acquire lock
+Lock service --> Client 2: granted, token 34
+Client 2 -> Storage: write (token 34)
+Storage --> Client 2: accepted (highest token = 34)
+Client 1 -> Storage: write (token 33)
+Storage --> Client 1: REJECTED (33 is less than 34)

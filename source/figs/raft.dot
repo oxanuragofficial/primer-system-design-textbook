@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.12; ranksep=0.5; node [shape=record fontsize=9];
+l [label="Leader (term 4)|<e>1:x=1|2:y=2|3:x=5|4:z=9" fillcolor="#d5e7ef"]; 
+f1 [label="Follower 1|1:x=1|2:y=2|3:x=5|4:z=9"]; f2 [label="Follower 2|1:x=1|2:y=2|3:x=5"]; f3 [label="Follower 3|1:x=1|2:y=2"]; f4 [label="Follower 4|1:x=1"];
+l->f1; l->f2; l->f3; l->f4 [style=dashed];
+c [label="Committed: entries 1 to 3\n(stored on 3 of 5 nodes)" shape=note fillcolor="#e3f1ea"]; l->c [style=invis]; }

@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.1; ranksep=0.6; node [shape=record fontsize=9.5];
+idx [label="<a>system|<b>design|<c>cache|<d>shard" fillcolor="#d5e7ef"];
+a [label="docs: 1, 4, 7, 9" fillcolor="#ffffff"]; b [label="docs: 1, 2, 7" fillcolor="#ffffff"]; c [label="docs: 2, 5" fillcolor="#ffffff"]; d [label="docs: 4, 6, 9" fillcolor="#ffffff"];
+q [label="Query: system design\n= docs 1, 7" shape=note fillcolor="#e3f1ea"];
+idx:a->a; idx:b->b; idx:c->c; idx:d->d; a->q [style=dashed]; b->q [style=dashed]; }

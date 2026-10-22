@@ -1,0 +1,10 @@
+participants: App, Cache, Database
+== write-through ==
+App -> Cache: set x = 5
+Cache -> Database: write x = 5 (synchronous)
+Database --> Cache: ok
+Cache --> App: ack (after both)
+== write-behind ==
+App -> Cache: set y = 7
+Cache --> App: ack (immediately)
+Cache -> Database: batch write later (async)

@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.14; ranksep=0.3; node [fontsize=9 margin="0.07,0.05"];
+lb [label="Load\nbalancer" fillcolor="#d5e7ef"]; w [label="Web tier\n(auto scaling)"]; c [label="Cache" shape=cylinder fillcolor="#e3f1ea"]; p [label="DB primary\n(writes)" shape=cylinder]; r1 [label="Read replica 1" shape=cylinder]; r2 [label="Read replica 2" shape=cylinder]; q [label="Queue" shape=cds]; wk [label="Workers\n(scale on depth)"];
+lb->w; w->c [label="hot reads"]; w->p [label="writes"]; w->r1 [label="reads"]; w->r2; p->r1 [style=dashed]; p->r2 [style=dashed]; w->q->wk; wk->p; }

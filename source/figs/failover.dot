@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.2; ranksep=0.35; 
+subgraph cluster_p { label="Active-passive"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; a1 [label="Active\n(serves)" fillcolor="#d5e7ef"]; p1 [label="Passive\n(standby)" style="rounded,filled,dashed"]; a1->p1 [label="heartbeat" style=dashed]; }
+subgraph cluster_a { label="Active-active"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; lb [label="Balancer" shape=ellipse fillcolor="#ffffff"]; x1 [label="Node 1\n(serves)" fillcolor="#d5e7ef"]; x2 [label="Node 2\n(serves)" fillcolor="#d5e7ef"]; lb->x1; lb->x2; }
+p1->lb [style=invis]; }

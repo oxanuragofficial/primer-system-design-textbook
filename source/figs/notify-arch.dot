@@ -1,0 +1,5 @@
+digraph G { rankdir=TB; nodesep=0.12; ranksep=0.25; node [fontsize=9 margin="0.07,0.05"];
+s [label="Services" shape=ellipse fillcolor="#ffffff"]; api [label="Notification\nAPI"]; f [label="Recipients,\npreferences,\nlimits" fillcolor="#d5e7ef"]; r [label="Render\ntemplates"];
+q1 [label="Push queue\n(hi / bulk)" shape=cds]; q2 [label="SMS queue\n(hi / bulk)" shape=cds]; q3 [label="Email queue\n(hi / bulk)" shape=cds];
+w1 [label="Push workers"]; w2 [label="SMS workers"]; w3 [label="Email workers"]; pv [label="Providers A and B\n(failover)" fillcolor="#ffffff" style="dashed,rounded"]; st [label="Status store\nand events" shape=cylinder];
+s->api->f->r; r->q1->w1; r->q2->w2; r->q3->w3; w1->pv; w2->pv; w3->pv; pv->st [style=dashed label="receipts"]; }

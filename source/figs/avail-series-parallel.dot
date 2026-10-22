@@ -1,0 +1,7 @@
+digraph G { rankdir=LR; nodesep=0.3; ranksep=0.35;
+subgraph cluster_s { label="In series: all must work\n99.9% x 99.9% = 99.8%"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded;
+ a [label="A\n99.9%"]; b [label="B\n99.9%"]; a->b; }
+subgraph cluster_p { label="In parallel: any one is enough\n1 - (0.001 x 0.001) = 99.9999%"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded;
+ in [shape=point width=0.08 label=""]; c [label="Replica 1\n99.9%"]; d [label="Replica 2\n99.9%"]; out [shape=point width=0.08 label=""]; in->c->out; in->d->out; }
+b->in [style=invis];
+}

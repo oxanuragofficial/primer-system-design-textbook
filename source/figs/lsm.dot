@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.3; ranksep=0.45;
+w [label="Write" shape=ellipse fillcolor="#ffffff"]; wal [label="Write-ahead log\n(disk, append)"]; mem [label="Memtable\n(memory, sorted)" fillcolor="#d5e7ef"];
+s1 [label="SSTable\nnew"]; s2 [label="SSTable"]; s3 [label="SSTable"]; big [label="Compacted\nSSTable" fillcolor="#d5e7ef"];
+w->wal [label="1 durable"]; w->mem [label="2 insert"]; mem->s1 [label="3 flush\nwhen full"]; s1->big [label="4 merge" style=dashed]; s2->big [style=dashed]; s3->big [style=dashed]; }

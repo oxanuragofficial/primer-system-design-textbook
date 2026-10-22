@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.2; ranksep=0.5;
+app [label="Application" shape=ellipse fillcolor="#ffffff"]; u [label="Users DB" shape=cylinder fillcolor="#d5e7ef"]; p [label="Products DB" shape=cylinder fillcolor="#d5e7ef"]; f [label="Forums DB" shape=cylinder fillcolor="#d5e7ef"];
+app->u; app->p; app->f; }

@@ -1,0 +1,3 @@
+digraph G { rankdir=BT; nodesep=0.15; ranksep=0.3; node [shape=record fontsize=9];
+us [label="{UserService|users\l|add_user()\lrequest_friend()\lanswer()\lprivate_chat()\l}" fillcolor="#d5e7ef"]; u [label="{User|id, name\lfriends, chats\lincoming\l}" fillcolor="#ffffff"]; ar [label="{AddRequest|from_user, to_user\lstatus\l}" fillcolor="#ffffff"]; ch [label="{Chat (abstract)|users, messages\l|post(sender, text)\l}" fillcolor="#ffffff"]; pc [label="PrivateChat\n(exactly 2)" fillcolor="#ffffff"]; gc [label="GroupChat\nadd/remove user" fillcolor="#ffffff"]; m [label="{Message|id, sender_id\ltext\l}" fillcolor="#ffffff"];
+u->us [arrowhead=odiamond]; ar->u [style=dashed]; pc->ch [arrowhead=empty]; gc->ch [arrowhead=empty]; m->ch [arrowhead=odiamond]; }

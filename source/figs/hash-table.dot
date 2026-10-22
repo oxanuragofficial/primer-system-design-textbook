@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.12; ranksep=0.7;
+node [shape=record style=filled fillcolor="#E8EEF4"];
+buckets [label="<b0>0|<b1>1|<b2>2|<b3>3|<b4>4" shape=record fillcolor="#d5e7ef"];
+k1 [label="ann: 31" shape=box style="rounded,filled"]; k2 [label="raj: 54" shape=box style="rounded,filled"]; k3 [label="lee: 12" shape=box style="rounded,filled"];
+buckets:b1 -> k3; buckets:b2 -> k1; k1 -> k2; }

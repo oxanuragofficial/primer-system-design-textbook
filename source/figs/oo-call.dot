@@ -1,0 +1,5 @@
+digraph G { rankdir=TB; nodesep=0.15; ranksep=0.22; node [shape=record fontsize=9];
+cc [label="{CallCenter|employees\lqueue\l|dispatch(call)\lfinish(emp)\lescalate(emp)\l}" fillcolor="#d5e7ef"]; e [label="{Employee|name, rank\lcall\l|take(call)\lcomplete()\lescalate()\l}" fillcolor="#ffffff"]; c [label="{Call|id, min_rank\lstate, handler\l}" fillcolor="#ffffff"];
+cc->e [label="1..*"]; e->c [label="0..1"];
+r [label="READY" shape=ellipse fillcolor="#ffffff"]; i [label="IN_PROGRESS" shape=ellipse fillcolor="#d5e7ef"]; d [label="COMPLETE" shape=ellipse fillcolor="#e3f1ea"];
+r->i [label="take"]; i->d [label="complete"]; i->r [label="escalate" style=dashed]; }

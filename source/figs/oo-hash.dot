@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.06; ranksep=0.35; node [shape=record fontsize=9.5];
+t [label="<0>0|<1>1|<2>2|<3>3|<4>4" fillcolor="#d5e7ef"]; a [label="11 : a" fillcolor="#ffffff"]; b [label="18 : b" fillcolor="#ffffff"]; c [label="23 : c" fillcolor="#ffffff"];
+n [label="size 5:  11 mod 5 = 1,  18 mod 5 = 3,  23 mod 5 = 3 (collision, chained)" shape=plaintext fillcolor="#ffffff"];
+t:1->a; t:3->b; b->c; }

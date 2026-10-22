@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.25; ranksep=0.8;
+w [label="Write v2\n(W = 2)" shape=ellipse fillcolor="#ffffff"]; r [label="Read\n(R = 2)" shape=ellipse fillcolor="#ffffff"];
+a [label="Replica A\nv2" shape=cylinder fillcolor="#d5e7ef"]; b [label="Replica B\nv2" shape=cylinder fillcolor="#d5e7ef"]; c [label="Replica C\nv1 (stale)" shape=cylinder fillcolor="#FBF0EC"];
+w->a; w->b; r->b [color="#b4492f"]; r->c [color="#b4492f"]; }

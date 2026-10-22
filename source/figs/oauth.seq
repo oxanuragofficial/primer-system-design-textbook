@@ -1,0 +1,9 @@
+participants: User, App, Identity provider
+User -> App: click "Sign in"
+App --> User: redirect with code_challenge (PKCE)
+User -> Identity provider: log in, approve scopes
+Identity provider --> User: redirect back with one-time code
+User -> App: deliver code
+App -> Identity provider: code + code_verifier
+Identity provider --> App: access token, ID token, refresh token
+App -> Identity provider: later: call API with access token

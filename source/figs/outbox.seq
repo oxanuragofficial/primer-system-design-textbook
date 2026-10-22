@@ -1,0 +1,8 @@
+participants: Service, Database, Relay, Broker
+Service -> Database: BEGIN: insert order + insert outbox row
+Database --> Service: COMMIT (both or neither)
+Relay -> Database: read unpublished outbox rows
+Relay -> Broker: publish OrderPlaced
+Broker --> Relay: ack
+Relay -> Database: mark row as sent
+note over Relay, Broker: crash before 'mark sent'? the event is published again, so consumers deduplicate

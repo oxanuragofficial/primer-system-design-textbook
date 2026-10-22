@@ -1,0 +1,10 @@
+participants: Thread A, Memory, Thread B
+Thread A -> Memory: read count
+Memory --> Thread A: 10
+Thread B -> Memory: read count
+Memory --> Thread B: 10
+self Thread A: compute 11
+self Thread B: compute 11
+Thread A -> Memory: write 11
+Thread B -> Memory: write 11
+note over Memory: count was 10; two increments, final value 11 (expected 12)

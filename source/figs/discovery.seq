@@ -1,0 +1,7 @@
+participants: Instance, Registry, Caller
+Instance -> Registry: register payments at 10.0.3.7:8080
+Instance -> Registry: heartbeat (every 5 s)
+Caller -> Registry: where is payments?
+Registry --> Caller: 10.0.3.7:8080, 10.0.3.9:8080 (healthy)
+Caller -> Instance: call 10.0.3.7:8080 (client-side balancing)
+note over Instance, Registry: no heartbeat for 15 s: the registry removes the instance

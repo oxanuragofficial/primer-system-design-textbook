@@ -1,0 +1,9 @@
+participants: Browser, Resolver, Root, .com TLD, example.com NS
+Browser -> Resolver: www.example.com?
+Resolver -> Root: www.example.com?
+Root --> Resolver: ask .com servers
+Resolver -> .com TLD: www.example.com?
+.com TLD --> Resolver: ask example.com NS
+Resolver -> example.com NS: www.example.com?
+example.com NS --> Resolver: 203.0.113.7, TTL 300 s
+Resolver --> Browser: 203.0.113.7 (cached for 300 s)

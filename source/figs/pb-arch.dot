@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.18; ranksep=0.35; node [fontsize=9.3 margin="0.08,0.06"];
+c [label="Clients" shape=ellipse fillcolor="#ffffff"]; cdn [label="DNS +\nCDN"]; lb [label="Load\nbalancer"]; app [label="App servers\n(stateless)" fillcolor="#d5e7ef"]; cache [label="Cache"]; ks [label="Key\nservice"]; db [label="SQL\nprimary +\nreplicas" shape=cylinder]; os [label="Object\nstore" shape=cylinder];
+cl [label="Cleanup\nworker"]; lg [label="Logs ->\nanalytics"];
+c->cdn->lb->app; app->cache; app->ks; app->db; app->os; cl->db [style=dashed]; cl->os [style=dashed]; app->lg [style=dashed]; }

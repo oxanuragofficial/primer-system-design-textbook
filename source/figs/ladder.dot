@@ -1,0 +1,3 @@
+digraph G { rankdir=BT; nodesep=0.2; ranksep=0.18; node [shape=box width=4.2 fontsize=10];
+a [label="1  Tune queries and indexes   (cheap, high impact)" fillcolor="#e3f1ea"]; b [label="2  Scale up   (bigger machine)" fillcolor="#e3f1ea"]; c [label="3  Cache hot reads" fillcolor="#E8EEF4"]; d [label="4  Replicate   (read scaling, availability)" fillcolor="#E8EEF4"]; e [label="5  Federate by function" fillcolor="#d5e7ef"]; f [label="6  Denormalise hot reads" fillcolor="#d5e7ef"]; g [label="7  Shard   (write and size scaling; most complex)" fillcolor="#bcd9e5"];
+a->b->c->d->e->f->g [arrowhead=none style=invis]; }

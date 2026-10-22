@@ -1,0 +1,13 @@
+participants: Browser, DNS resolver, Server
+== 1. name lookup ==
+Browser -> DNS resolver: where is www.example.com?
+DNS resolver --> Browser: 203.0.113.7
+== 2. TCP handshake (1 RTT) ==
+Browser -> Server: SYN
+Server --> Browser: SYN-ACK
+== 3. TLS 1.3 handshake (1 RTT) ==
+Browser -> Server: ClientHello + key share
+Server --> Browser: ServerHello, certificate, finished
+== 4. HTTP request ==
+Browser -> Server: GET / (encrypted)
+Server --> Browser: 200 OK, first bytes of the page

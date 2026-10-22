@@ -1,0 +1,8 @@
+participants: User A, Edge, Origin, User B
+User A -> Edge: GET /logo.png
+Edge -> Origin: miss: fetch /logo.png
+Origin --> Edge: 200 + Cache-Control: max-age=3600
+Edge --> User A: 200 (stored at edge)
+== later, same region ==
+User B -> Edge: GET /logo.png
+Edge --> User B: 200 (hit, no origin trip)

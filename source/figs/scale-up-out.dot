@@ -1,0 +1,6 @@
+digraph G { rankdir=LR; compound=true; nodesep=0.25; ranksep=0.45;
+subgraph cluster_a { label="Vertical: one bigger machine"; fontname="Inter"; fontsize=10; color="#9fb3c2"; style=rounded; 
+ small [label="Small\nserver" fillcolor="#ffffff"]; big [label="BIG server\nmore CPU, RAM, disk" fillcolor="#d5e7ef"]; small->big [label="replace"]; }
+subgraph cluster_b { label="Horizontal: many machines behind a load balancer"; fontname="Inter"; fontsize=10; color="#9fb3c2"; style=rounded;
+ lb [label="Load\nbalancer"]; s1 [label="Server 1"]; s2 [label="Server 2"]; s3 [label="Server 3"]; lb->s1; lb->s2; lb->s3; }
+}

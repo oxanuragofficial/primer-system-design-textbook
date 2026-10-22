@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.5; ranksep=1.3;
+c1 [label="Client 1" shape=ellipse fillcolor="#ffffff"]; n1 [label="Node 1\nx = 9" shape=cylinder fillcolor="#d5e7ef"]; n2 [label="Node 2\nx = 5 (stale)" shape=cylinder fillcolor="#FBF0EC"]; c2 [label="Client 2" shape=ellipse fillcolor="#ffffff"];
+c1->n1 [label="write x = 9"]; n1->n2 [label="  PARTITION  \n(link down)" style=dashed color="#b4492f" fontcolor="#b4492f" dir=none arrowhead=none]; c2->n2 [label="read x"];
+{rank=same; n1; n2} }

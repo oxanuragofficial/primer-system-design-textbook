@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.22; ranksep=0.5;
+app [label="Application" shape=ellipse fillcolor="#ffffff"]; r [label="Router\nshard = f(user id)" fillcolor="#d5e7ef"]; 
+s1 [label="Shard 1\nusers A-H" shape=cylinder]; s2 [label="Shard 2\nusers I-P" shape=cylinder]; s3 [label="Shard 3\nusers Q-Z" shape=cylinder];
+app->r; r->s1; r->s2; r->s3; }

@@ -1,0 +1,8 @@
+digraph G { rankdir=LR; nodesep=0.22; ranksep=0.36;
+user [label="User" shape=ellipse fillcolor="#ffffff"];
+dns [label="DNS"]; cdn [label="CDN"]; lb [label="Load balancer\n+ reverse proxy"]; app [label="App\nservers" fillcolor="#d5e7ef"];
+cache [label="Cache"]; db [label="Database" shape=cylinder fillcolor="#d5e7ef"]; q [label="Queue +\nworkers"]; os [label="Object\nstore" shape=cylinder];
+user->dns [label="1"]; user->cdn [label="2"]; user->lb [label="3"]; 
+lb->app [label="4"]; app->cache [label="5"]; app->db [label="6"];
+app->q [style=dashed label="7"]; q->os [style=dashed]; q->db [style=dashed];
+}

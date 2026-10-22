@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.25; ranksep=0.22;
+subgraph cluster_c { label="Client process"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; cc [label="Caller\ncode"]; cs [label="Client stub" fillcolor="#d5e7ef"]; cc->cs [label="call"]; }
+net [label="Network\n(bytes)" shape=ellipse fillcolor="#ffffff"];
+subgraph cluster_s { label="Server process"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; ss [label="Server stub" fillcolor="#d5e7ef"]; fn [label="Real\nfunction"]; ss->fn [label="call"]; }
+cs->net->ss; }

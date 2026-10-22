@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.2; ranksep=0.32; node [fontsize=9.5];
+u [label="User" shape=ellipse fillcolor="#ffffff"]; w [label="Web app"]; q [label="Queue" fillcolor="#d5e7ef" shape=box style="rounded,filled"]; k1 [label="Worker 1"]; k2 [label="Worker 2"]; s [label="Store /\nnotify" shape=cylinder];
+u->w [label="1 request"]; w->u [label="3 fast reply\n(202 Accepted)" style=dashed constraint=false]; w->q [label="2 enqueue"]; q->k1; q->k2; k1->s; k2->s; }

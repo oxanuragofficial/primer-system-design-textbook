@@ -1,0 +1,8 @@
+participants: Client, App server, Key service, Object store, SQL database
+Client -> App server: POST /v1/pastes (Idempotency-Key)
+App server -> Key service: next key (from in-memory batch)
+App server -> Object store: put content under content_key
+Object store --> App server: stored
+App server -> SQL database: INSERT metadata (short_code, expiry)
+SQL database --> App server: committed
+App server --> Client: 201 Created, url

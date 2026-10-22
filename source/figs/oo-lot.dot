@@ -1,0 +1,3 @@
+digraph G { rankdir=BT; nodesep=0.15; ranksep=0.3; node [shape=record fontsize=9];
+pl [label="{ParkingLot|levels\l|park(v)\lleave(v)\l}" fillcolor="#d5e7ef"]; lv [label="{Level|floor, spots\l|park(v)\lavailable()\l}" fillcolor="#ffffff"]; sp [label="{Spot|number, size\lvehicle\l}" fillcolor="#ffffff"]; v [label="{Vehicle (abstract)|plate, spots\lspots_needed\l|can_fit(spot)\l}" fillcolor="#ffffff"]; m [label="Motorcycle" fillcolor="#ffffff"]; c [label="Car" fillcolor="#ffffff"]; b [label="Bus\n(5 spots)" fillcolor="#ffffff"];
+lv->pl [arrowhead=odiamond label="1..*"]; sp->lv [arrowhead=odiamond label="1..*"]; m->v [arrowhead=empty]; c->v [arrowhead=empty]; b->v [arrowhead=empty]; }

@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.35; ranksep=0.5; node [shape=record];
+u [label="{users|id (PK)\lemail (unique)\lcreated_at\l}" fillcolor="#d5e7ef"]; p [label="{pastes|id (PK)\luser_id (FK)\lshort_code\lcontent_key\lexpires_at\l}" fillcolor="#d5e7ef"]; v [label="{paste_views|id (PK)\lpaste_id (FK)\lviewed_at\l}" fillcolor="#d5e7ef"];
+u->p [label="1:N" arrowhead=crow]; p->v [label="1:N" arrowhead=crow]; }

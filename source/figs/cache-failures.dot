@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.2; ranksep=0.3; node [fontsize=9.5];
+subgraph cluster_a { label="Stampede: one hot key expires"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; r1 [label="1000\nrequests" shape=ellipse fillcolor="#ffffff"]; c1 [label="Cache\n(key expired)"]; d1 [label="DB" shape=cylinder fillcolor="#FBF0EC"]; r1->c1 [label="miss"]; c1->d1 [label="1000 reads" color="#b4492f" fontcolor="#b4492f"]; }
+subgraph cluster_b { label="Penetration: keys that do not exist"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; r2 [label="random\nids" shape=ellipse fillcolor="#ffffff"]; c2 [label="Cache\n(never has them)"]; d2 [label="DB" shape=cylinder fillcolor="#FBF0EC"]; r2->c2 [label="miss"]; c2->d2 [color="#b4492f"]; }
+subgraph cluster_c { label="Avalanche: many keys expire together"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; r3 [label="all\ntraffic" shape=ellipse fillcolor="#ffffff"]; c3 [label="Cache\n(mass expiry)"]; d3 [label="DB" shape=cylinder fillcolor="#FBF0EC"]; r3->c3; c3->d3 [label="burst" color="#b4492f" fontcolor="#b4492f"]; }
+}

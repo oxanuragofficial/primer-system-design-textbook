@@ -1,0 +1,2 @@
+digraph G { rankdir=LR; nodesep=0.15; ranksep=0.28; node [fontsize=10];
+a [label="Ingest"]; b [label="Queue or log" fillcolor="#d5e7ef"]; c [label="Process"]; d [label="Store" fillcolor="#d5e7ef" shape=cylinder]; e [label="Serve"]; a->b->c->d->e; }

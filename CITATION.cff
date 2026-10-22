@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this textbook, please cite it as below."
+title: "System Design: From First Principles to Production"
+type: book
+authors:
+  - name: "Anurag"
+license: CC-BY-4.0
+abstract: "A beginner-to-professional system design textbook with worked examples, case studies, object-oriented designs and interview practice. Syllabus based on the System Design Primer by Donne Martin (CC BY 4.0)."

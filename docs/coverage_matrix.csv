@@ -1,0 +1,76 @@
+Notebook section,Book location,Status
+1. The big picture: life of a request,"sec-what, sec-lifecycle",Expanded
+1. Performance vs scalability,sec-perfscale,Covered
+1. Latency vs throughput,sec-latency,Expanded (percentiles)
+1. Scaling up vs scaling out,sec-scale,Covered
+2. CAP theorem,sec-cap,"Expanded (PACELC, partitions)"
+2. Consistency patterns,"sec-consmodels, sec-quorum",Expanded
+2. Availability patterns,"sec-availpatterns, sec-failoverdesign",Expanded
+2. Availability in numbers,sec-availmath,Covered
+3. Layers in one minute,sec-layers,Covered
+3. HTTP,sec-http,"Expanded (HTTP/1.1, 2, 3)"
+3. TCP and UDP,"sec-tcp, sec-udp","Expanded (QUIC, TLS)"
+3. RPC,sec-rpc,Covered
+3. REST,"sec-rest, sec-design",Expanded
+4. DNS,dns,Covered
+4. CDN,cdn,Covered
+4. Load balancers,lb,Expanded
+4. Reverse proxy,proxy,Covered
+5. Separating web and application layers,sec-tiers,Covered
+5. Microservices,"sec-styles, sec-boundaries",Expanded
+5. Service discovery,sec-discovery,Covered
+6. RDBMS and ACID,"sec-acid, sec-index",Expanded
+6. Replication,sec-repl,Covered
+6. Federation,sec-fed,Covered
+6. Sharding,sec-shard,Covered
+6. Denormalization,sec-fed,Covered
+6. SQL tuning,sec-tuning,Covered
+7. What is NoSQL?,sec-nosqlwhy,Covered
+7. The four families,sec-families,Covered
+7. SQL or NoSQL?,sec-sqlornosql,Covered
+8. Why cache?,sec-whycache,Covered
+8. When to update the cache,sec-updatestrat,Expanded
+9. Asynchronous workflows,"sec-whyasync, sec-queues",Expanded
+9. Security basics,"sec-authn, sec-authz, sec-attacks",Expanded
+10. Why estimate?,sec-whyest,Covered
+10. Powers of two,sec-pow2,Covered
+10. Latency numbers worth knowing,sec-latnum,Covered
+10. Turning traffic into numbers,sec-traffic,Covered
+11. The four steps,sec-steps,Expanded
+11. The 20-point checklist,sec-checklist,Covered
+12.1 Pastebin / URL shortener,ch-pastebin,Expanded
+12.2 Twitter timeline and search,ch-twitter,Expanded
+12.3 Web crawler and search,ch-crawler,Expanded
+12.4 Mint,ch-mint,Expanded
+12.5 Social network shortest path,ch-socialgraph,Expanded
+12.6 Query cache (LRU),ch-querycache,Expanded
+12.7 Sales rank by category,ch-salesrank,Expanded
+12.8 Scaling to millions on AWS,ch-aws,Expanded
+"13. OO design method, hash map, LRU, call center, cards, parking lot, chat",ch-oo-ds,Expanded (code and tests)
+13. Circular array (open exercise),sec-oo-circ,Completed
+14. More questions to practise (23),ch-practice,Expanded
+14. Real-world architectures (17 systems),sec-rw-systems,Covered
+14. Company architectures (23 themes),sec-rw-companies,Covered
+14. Engineering blogs,sec-rw-blogs,Covered (links not re-verified)
+15. Symptom to first fix,sec-rev-symptom,Expanded
+15. Numbers and formulas,sec-rev-numbers,Expanded
+15. Self-test: trade-offs,sec-rev-tradeoff,Expanded
+15. Coverage map (primer to notebook),app-coverage,Superseded by this appendix
+Topic,Location
+"Processes, threads, locks, races, deadlock",ch-concurrency
+"Hash tables, B-trees, LSM trees, heaps, tries, Bloom filters, HyperLogLog",ch-ds
+"Idempotency keys, pagination, versioning, webhooks","sec-idem, sec-paging, sec-version, sec-webhook"
+Rate limiting and token bucket,ratelimit
+Schema migrations (expand and contract),sec-migrate
+"PITR, backups versus replicas versus failover",sec-backup
+"Quorums, consistent hashing, conflicts and repair","sec-quorum, sec-conshash, sec-conflict"
+"Cache failure patterns (stampede, penetration, hot keys)",sec-cachefail
+"Outbox, sagas, dead-letter queues, back pressure","sec-outbox, sec-retry, sec-backpressure"
+"Clocks, fencing tokens, leader election, consensus, two-phase commit",ch-consensus
+Resilience patterns,ch-resilience
+"Strangler pattern, architecture decision records","sec-strangler, sec-adr"
+"Threat modelling, OAuth and tokens, secrets, privacy by design",ch-security
+"Logs, metrics, traces, SLOs, incident response, RPO and RTO",ch-observability
+"Containers, deployment strategies, autoscaling, cost, capacity planning",ch-cloud
+Payments and notification end-to-end exercises,ch-e2e
+Practice rubric and study plan,"sec-pr-use, sec-pr-plan"

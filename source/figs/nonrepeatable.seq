@@ -1,0 +1,8 @@
+participants: T1, Database, T2
+T1 -> Database: BEGIN; SELECT balance (account 7)
+Database --> T1: 500
+T2 -> Database: BEGIN; UPDATE balance = 400; COMMIT
+Database --> T2: committed
+T1 -> Database: SELECT balance (account 7) again
+Database --> T1: 400 (changed inside one transaction)
+note over T1, Database: allowed at READ COMMITTED; prevented by REPEATABLE READ and SERIALIZABLE

@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.15; ranksep=0.25; node [fontsize=9 margin="0.08,0.06"];
+a [label="Attacker" shape=ellipse fillcolor="#FBF0EC" color="#b4492f"]; b [label="Edge:\nWAF, DDoS,\nrate limits"]; c [label="Network:\nsegments,\nfirewalls"]; d [label="Identity:\nAuthN, MFA"]; e [label="App:\nAuthZ,\nvalidation"]; f [label="Data:\nencryption,\nleast privilege"]; g [label="Monitoring\nand audit" fillcolor="#e3f1ea"];
+a->b->c->d->e->f; g->f [style=dashed arrowhead=none]; {rank=same; f; g} }

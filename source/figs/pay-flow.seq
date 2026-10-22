@@ -1,0 +1,11 @@
+participants: Client, Payments, DB, Provider
+Client -> Payments: POST /payments (Idempotency-Key)
+Payments -> DB: insert CREATED + outbox
+Payments --> Client: 202 accepted
+Payments -> Provider: charge (key = payment id)
+Provider --> Payments: timeout
+Payments -> DB: state UNKNOWN
+== recovery ==
+Payments -> Provider: lookup by payment id
+Provider --> Payments: captured
+Payments -> DB: SUCCEEDED + ledger + outbox

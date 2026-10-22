@@ -1,0 +1,6 @@
+digraph G { rankdir=LR; nodesep=0.15; ranksep=0.9; node [shape=box];
+subgraph cluster_bits { label="bit array"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; 
+bits [shape=record fillcolor="#d5e7ef" label="<p0>0|<p1>1|<p2>0|<p3>1|<p4>1|<p5>0|<p6>1|<p7>0|<p8>1|<p9>0"]; }
+cat [label="add \"cat\"" fillcolor="#ffffff"]; dog [label="add \"dog\"" fillcolor="#ffffff"]; emu [label="test \"emu\"\n(bit 5 = 0)\nabsent" fillcolor="#e3f1ea"]; fox [label="test \"fox\"\n(bits 1,4,8 = 1)\nmaybe present" fillcolor="#FBF0EC"];
+cat->bits:p1; cat->bits:p4; cat->bits:p8 [constraint=true]; dog->bits:p3; dog->bits:p6; dog->bits:p4;
+emu->bits:p5 [style=dashed color="#b4492f"]; fox->bits:p1 [style=dashed color="#b4492f"];  }

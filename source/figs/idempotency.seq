@@ -1,0 +1,10 @@
+participants: Client, Server, Key store
+Client -> Server: POST /payments (key K1)
+Server -> Key store: put_if_absent(K1)
+Server -> Key store: save result "paid, id 77"
+Server --> Client: 201 Created (response lost)
+== client times out and retries with the same key ==
+Client -> Server: POST /payments (key K1)
+Server -> Key store: lookup K1
+Key store --> Server: done: "paid, id 77"
+Server --> Client: 201 Created, id 77 (replayed, no second charge)

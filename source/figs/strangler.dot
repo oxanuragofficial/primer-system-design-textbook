@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.2; ranksep=0.45; node [fontsize=9.5];
+u [label="Users" shape=ellipse fillcolor="#ffffff"]; f [label="Routing facade\n(gateway)" fillcolor="#d5e7ef"]; l [label="Legacy system\n(shrinking)" style="rounded,filled,dashed"]; n1 [label="New service:\nsearch"]; n2 [label="New service:\ncheckout"];
+u->f; f->l [label="most paths" style=dashed]; f->n1 [label="/search"]; f->n2 [label="/checkout"]; }

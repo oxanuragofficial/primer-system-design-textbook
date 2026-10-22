@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.18; ranksep=0.4; node [fontsize=9.5];
+p [label="Producer" shape=ellipse fillcolor="#ffffff"]; t [label="Topic\n(partitioned log)" fillcolor="#d5e7ef"];
+subgraph cluster_b { label="Group: billing"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; b1 [label="Consumer 1"]; b2 [label="Consumer 2"]; }
+subgraph cluster_s { label="Group: shipping"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; s1 [label="Consumer 1"]; }
+p->t; t->b1; t->b2; t->s1; }

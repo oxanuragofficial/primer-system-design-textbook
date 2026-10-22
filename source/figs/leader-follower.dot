@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.25; ranksep=0.5;
+app [label="Application" shape=ellipse fillcolor="#ffffff"]; l [label="Leader\n(writes)" shape=cylinder fillcolor="#d5e7ef"]; f1 [label="Follower 1\n(reads)" shape=cylinder]; f2 [label="Follower 2\n(reads)" shape=cylinder];
+app->l [label="writes"]; l->f1 [label="log" style=dashed]; l->f2 [label="log" style=dashed]; f1->app [label="reads" constraint=false color="#9fb3c2"]; f2->app [constraint=false color="#9fb3c2"]; }

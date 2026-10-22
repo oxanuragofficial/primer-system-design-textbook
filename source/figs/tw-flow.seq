@@ -1,0 +1,11 @@
+participants: Author, API, Queue, Fan-out, Timelines, Follower
+Author -> API: POST tweet
+API -> Queue: store tweet; publish TweetCreated
+API --> Author: 201 Created (does not wait for fan-out)
+Queue -> Fan-out: TweetCreated
+Fan-out -> Timelines: insert id into each active follower's list
+== later ==
+Follower -> API: GET home timeline
+API -> Timelines: read 50 ids
+Timelines --> API: ids
+API --> Follower: hydrated tweets (+ merged celebrity tweets)

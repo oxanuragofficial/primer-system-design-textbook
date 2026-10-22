@@ -1,0 +1,5 @@
+digraph G { rankdir=TB; nodesep=0.2; ranksep=0.28; node [fontsize=9 margin="0.07,0.05"];
+u [label="Users" shape=ellipse fillcolor="#ffffff"]; cdn [label="CDN" fillcolor="#d5e7ef"]; s3 [label="Object storage\n(static assets)" shape=cylinder]; lb [label="Load balancer" fillcolor="#d5e7ef"];
+subgraph cluster_a { label="Zone A"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; w1 [label="Web 1"]; dbp [label="DB primary" shape=cylinder]; }
+subgraph cluster_b { label="Zone B"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; w2 [label="Web 2"]; dbs [label="DB standby" shape=cylinder]; }
+u->cdn; cdn->s3; u->lb; lb->w1; lb->w2; w1->dbp; w2->dbp; dbp->dbs [label="replicate" style=dashed]; }

@@ -1,0 +1,8 @@
+participants: Node A, Node B, Node C
+self Node A: event, clock = 1
+Node A -> Node B: message (clock 2)
+self Node B: clock = 3
+Node B -> Node C: message (clock 4)
+self Node C: clock = 5
+self Node A: local event, clock = 3
+note over Node A, Node C: cause always has a smaller number than effect; equal or smaller numbers alone do not prove causality

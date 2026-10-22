@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; nodesep=0.15; ranksep=0.25; node [fontsize=9];
+subgraph cluster_m { label="Monolith"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; m [label="One application\n(all features)" fillcolor="#d5e7ef"]; md [label="One DB" shape=cylinder]; m->md; }
+subgraph cluster_mm { label="Modular monolith"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; mo [label="Orders\nmodule"]; mp [label="Payments\nmodule"]; mdd [label="One DB\n(private schemas)" shape=cylinder]; mo->mp [label="interface"]; mo->mdd; mp->mdd; }
+subgraph cluster_ms { label="Microservices"; fontname="Inter"; fontsize=9.5; color="#9fb3c2"; style=rounded; so [label="Orders\nservice" fillcolor="#d5e7ef"]; sp [label="Payments\nservice" fillcolor="#d5e7ef"]; sod [label="DB" shape=cylinder]; spd [label="DB" shape=cylinder]; so->sod; sp->spd; so->sp [label="API / events"]; }
+}

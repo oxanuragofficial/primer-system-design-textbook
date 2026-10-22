@@ -1,0 +1,10 @@
+participants: App, Cache, Database
+== read ==
+App -> Cache: get user:42
+Cache --> App: miss
+App -> Database: SELECT user 42
+Database --> App: row
+App -> Cache: set user:42 (TTL 300 s)
+== write ==
+App -> Database: UPDATE user 42
+App -> Cache: delete user:42

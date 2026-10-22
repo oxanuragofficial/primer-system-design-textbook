@@ -1,0 +1,12 @@
+participants: Client, API, Cache, Index, Docs
+Client -> API: query
+self API: normalise
+API -> Cache: get(key)
+Cache --> API: hit: results
+API --> Client: results (fast)
+== on a miss ==
+Cache --> API: miss
+API -> Index: matching doc ids
+API -> Docs: titles, snippets
+API -> Cache: put(key, results, TTL)
+API --> Client: results

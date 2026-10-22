@@ -1,0 +1,4 @@
+digraph G { rankdir=LR; nodesep=0.16; ranksep=0.35; node [fontsize=9.2 margin="0.07,0.05"];
+a [label="Ordinary author\n(500 followers)" shape=ellipse fillcolor="#ffffff"]; cel [label="Celebrity\n(50M followers)" shape=ellipse fillcolor="#FFF8E6"];
+t1 [label="Follower 1\ntimeline"]; t2 [label="Follower 2\ntimeline"]; t3 [label="Follower 500\ntimeline"]; ct [label="Celebrity's own\nrecent tweets" shape=cylinder fillcolor="#FFF8E6"]; r [label="Read: cached timeline\n+ merge celebrities" fillcolor="#d5e7ef"];
+a->t1 [label="push"]; a->t2; a->t3; cel->ct [label="store only"]; t1->r; ct->r [label="pull at read time" style=dashed]; }

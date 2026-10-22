@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; nodesep=0.25; ranksep=0.5;
+r [label="Refill:\nr tokens / second" shape=ellipse fillcolor="#ffffff"]; b [label="Bucket\ncapacity B tokens" shape=cylinder fillcolor="#d5e7ef"]; req [label="Request" shape=ellipse fillcolor="#ffffff"]; ok [label="Allowed\n(take 1 token)" fillcolor="#e3f1ea"]; no [label="429 rejected\n(bucket empty)" fillcolor="#FBF0EC" color="#b4492f"];
+r->b; req->b [label="needs 1"]; b->ok [label="token\navailable"]; b->no [label="no token" color="#b4492f" fontcolor="#b4492f"]; }

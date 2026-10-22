@@ -1,0 +1,6 @@
+digraph G { rankdir=LR; nodesep=0.18; ranksep=0.4; node [fontsize=9.5];
+c [label="Clients" shape=ellipse fillcolor="#ffffff"];
+subgraph cluster_w { label="Web tier (public)"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; w1 [label="Web 1"]; w2 [label="Web 2"]; }
+subgraph cluster_a { label="Application tier (private)"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; a1 [label="App 1" fillcolor="#d5e7ef"]; a2 [label="App 2" fillcolor="#d5e7ef"]; a3 [label="App 3" fillcolor="#d5e7ef"]; }
+subgraph cluster_d { label="Data tier"; fontname="Inter"; fontsize=9; color="#9fb3c2"; style=rounded; db [label="Database" shape=cylinder]; ca [label="Cache" shape=cylinder]; }
+c->w1; c->w2; w1->a1; w1->a2; w2->a2; w2->a3; a1->db; a2->ca; a3->db; }
